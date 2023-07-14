@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verify Signature</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+       
+    </head>
+    <body>
+<!--  Header image and title -->
+        <div id="header">
+            <img src="../static/img/header-img.png" alt="Header image" class="imag">
+            <h1 id="title"> SIGNATURE   VERIFICATION</h1>
+        </div>
+        <!-- Customer ID -->
+        <form action = "http://localhost:5000/submit" method = "POST"
+         enctype = "multipart/form-data">
+        <div class="flex-container">
+            <div id="CustId">
+            <label for="Number" class="cid"> Customer Id</label> <br>
+           <input type="number" name='cust_id' class="num-box" required>
+        </div> <br>
+        <!--  Choose a  file  -->
+        <div class="upload-btn">
+            <label for="btn" class="upld-txt">Upload Signature</label> <br>
+        <div class="upload-btn-wrapper"> 
+            <button class="btn">Choose a file</button>
+            <input type="file" name="upload_file" accept="image/*" >
+        </div>
+        </div>
+        </div>
+        <br>
+
+         <button type="submit"  class="button"  value="Submit" >Submit</button>
+        
+        </form>
+
+    <!-- Reference Signature-->
+        <div class="flex-container">
+            {% if prediction %}
+            <table border = 0>
+                <tr>
+                    <td>
+
+        <div class="Ref-img">
+        Reference Signature
+        <br>
+        <img src = {{ ref_sig }} id="ref_image_Signature" alt="" width="500" height="200" style= "visibility:visible">
+        <br>
+        </div>
+        </td>
+                    <td>
+                    </td>
+                    <td>
+    <!-- Uploaded  Signature -->
+        <div class="up-img">
+            Uploaded Signature
+            <br>
+            <img src = {{ upl_sig }} id="upd_image_Signature" alt="" width="500" height="200" style= "visibility:visible">
+            <br>
+        </div>
+                    </td>
+           </tr>
+            <tr>
+                <td> </td>
+                <td>
+            <!-- Result -->
+        <div class="result">
+            <p>Probability of Match : {{ probability }} </p>
+            <p>Result : {{ prediction }} </p>
+         {% if prediction == "Its a Forged Signature" %}
+         <img src="../static/img/wrong.gif" id="crt" alt="correct" height= "200px" width="250px">
+         {% elif prediction == "Its a Genuine Signature" %}
+            <img src="../static/img/correct.gif" id="crt" alt="correct" height= "200px" width="250px">
+         {% endif %}
+        </div>
+                </td>
+                <td> </td>
+            </tr>
+            </table>
+            <br>
+
+            {% endif %}
+        </div>
+    </body>
+ <!--<script src="./static/js/index.js"> </script>-->
+ </html>

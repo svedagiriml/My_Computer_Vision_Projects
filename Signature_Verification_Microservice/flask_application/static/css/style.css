@@ -1,0 +1,121 @@
+body{
+    /* background-color: rgb(211, 242, 249); */
+    /* background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% ); */
+    background-color: aliceblue;
+}
+
+#header{
+    padding:0 20px;
+}
+.imag{
+    display:block;
+     margin:0 auto;
+     height: 200px;
+     width: 500px;
+}
+
+#CustId {
+    display: block;
+}
+
+.cid{
+    font-size: 200%;
+    margin-left: 150px;
+    color: rgb(53, 53, 53);
+    /* margin-bottom: 90px; */
+    
+}
+
+.num-box{
+    width: 28rem;
+    height: 2.3rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .upld-txt{
+    font-size: 28px;
+    margin-left: 150px;
+    color: rgb(53, 53, 53);
+  }
+
+  .btn {
+    border: 2px rgb(33, 80, 172);
+    color: rgb(255, 255, 255);
+    background-color: rgb(63, 121, 237);
+    padding: 0.7rem 11rem;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .upload-btn{
+    display: block;
+  }
+
+#title {
+    color: rgb(0, 0, 0);
+     margin-left: 33%;
+     font-size: 40px;
+    margin-top: 9px;
+    font-weight: bolder;
+    
+}
+
+.button {
+    background-color: #039b0a; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 45%;
+    /* margin-top: 0.5px; */
+  }
+
+  input[type=submit]:hover {
+    background-color: #23bd28;
+  }
+
+
+  .flex-container {
+    display: flex;
+     flex-direction: row;
+     justify-content:center;
+     gap: 10rem;
+     margin-top: 2rem;
+  }
+  
+  .up-img{
+    font-size: x-large;
+
+}
+
+
+.Ref-img{
+    font-size: x-large;
+
+}
+
+.result{
+    text-align: center;
+    font-size: 28px;
+    color: rgb(53, 53, 53);
+}
